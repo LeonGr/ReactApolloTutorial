@@ -43,7 +43,6 @@ const LinkList = () => {
         if (history.location.pathname.includes('top')) {
             links.sort((l1: LinkObject, l2: LinkObject) => l2.votes.length - l1.votes.length);
         } else {
-            console.log('sort new');
             links.sort((l1: LinkObject, l2: LinkObject) => l2.createdAt > l1.createdAt);
         }
 
@@ -55,10 +54,7 @@ const LinkList = () => {
             {data && (
                 <>
                     {getLinks().map((link: LinkObject, index: number) => (
-                        <>
-                            <Link key={link.id} link={link} index={index}/>
-                            <br/>
-                        </>
+                        <Link key={link.id} link={link} index={index}/>
                     ))}
                 </>
             )}
