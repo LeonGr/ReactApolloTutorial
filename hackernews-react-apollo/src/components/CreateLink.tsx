@@ -19,6 +19,19 @@ const CREATE_LINK_MUTATION = gql`
     }
 `;
 
+// const CREATE_LINK_MUTATION = gql`
+//     mutation PostMutation(
+//         $input: CreateLinkInput!
+//     ) {
+//     createLink(input: $input) {
+//         id
+//         createdat
+//         url
+//         description
+//     }
+//     }
+// `;
+
 const CreateLink = () => {
     const history = useHistory();
 

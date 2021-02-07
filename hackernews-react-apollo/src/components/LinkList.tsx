@@ -33,8 +33,36 @@ export const FEED_QUERY = gql`
   }
 `;
 
+// export const FEED_QUERY = gql`
+// query FeedQuery($take: Int, $skip: Int, $orderBy: [LinksOrderBy!]) {
+//   allLinks(first: $take, offset: $skip, orderBy: $orderBy) {
+//     nodes {
+//       id
+//       createdat
+//       url
+//       description
+//       postedbyid
+//       userByPostedbyid {
+//         id
+//         name
+//       }
+//       votesByLinkid {
+//         nodes {
+//           id
+//           userByUserid {
+//             id
+//             name
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `;
+
 const LinkList = () => {
     const {data} = useQuery(FEED_QUERY);
+    console.log(data);
     const history = useHistory();
 
     const getLinks = () => {
