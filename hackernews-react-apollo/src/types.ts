@@ -1,4 +1,4 @@
-export interface LinkObject {
+export type LinkObject =  {
     id: string;
     createdAt: number;
     url: string;
@@ -9,11 +9,11 @@ export interface LinkObject {
     votes: [];
 }
 
-export interface Feed {
+export type Feed = {
     links: [LinkObject];
 }
 
-export interface LinkWrapper {
+export type LinkWrapper = {
     index: number;
     link: LinkObject;
 }
